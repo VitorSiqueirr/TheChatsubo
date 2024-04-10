@@ -1,0 +1,90 @@
+.add-attendant-form {
+  position: fixed;
+  background-color: var(--book-purple);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 50%;
+  max-width: 20rem;
+  height: max-content;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+.add-attendant-form::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #8e7d19;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0 0 0.25rem #8e7d19);
+  z-index: -1;
+}
+
+.attendant-input {
+  background-color: var(--book-purple-variation);
+  height: 2rem;
+}
+
+.attendant-button-add {
+  cursor: pointer;
+  background-color: #8e7d19;
+  transition: background-color 0.3s, filter 0.3s;
+}
+
+.attendant-button-add:hover {
+  background-color: #ac961f;
+  filter: drop-shadow(0 0 0.25rem #8e7d19);
+}
+
+.attendant-button-cancel {
+  cursor: pointer;
+  background-color: #ac2c5c;
+  transition: background-color 0.3s, filter 0.3s;
+}
+
+.attendant-button-cancel:hover {
+  background-color: #cc336b;
+  filter: drop-shadow(0 0 0.25rem #ac2c5c);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000094;
+  z-index: 99;
+}
+
+.add-attendant-form h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.submit {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}

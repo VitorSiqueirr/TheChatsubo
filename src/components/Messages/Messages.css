@@ -1,0 +1,119 @@
+.box-messages {
+  position: relative;
+  min-height: 20rem;
+  width: 100%;
+  background-color: var(--book-purple);
+  border-radius: 0.25rem;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.box-messages::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #d400ff;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0 0 0.5rem #d400ff);
+  z-index: -1;
+}
+
+.box-messages h1 {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: var(--book-purple-variation);
+  padding: 0.25rem 0;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.display-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.1rem;
+  max-height: 20rem;
+  overflow: auto;
+  border-radius: 0.25rem;
+}
+
+.display-messages::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.display-messages::-webkit-scrollbar-track {
+  background: var(--book-purple);
+  border-radius: 0 0 0.25rem 0;
+  border: none;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.display-messages::-webkit-scrollbar-thumb {
+  background: var(--book-purple-variation);
+  border-radius: 0 0 0.25rem 0;
+  border: none;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1rem;
+  height: 10rem;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.retry-button {
+  background-color: #9000ad;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: #d400ff;
+  filter: drop-shadow(0 0 0.5rem #d400ff);
+}
+
+.message {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--book-message);
+  border-radius: 0.25rem;
+}
+
+.name {
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+}
+
+.loading {
+  height: 5rem;
+  width: 5rem;
+  border: 5px solid white;
+  border-bottom: 5px solid #d400ff;
+  border-radius: 100%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

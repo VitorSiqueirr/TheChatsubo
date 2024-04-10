@@ -1,0 +1,46 @@
+.alert-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--book-purple-variation);
+  border: 0.25rem solid #ac2c5c;
+  filter: drop-shadow(0 0 1rem #ac2c5c);
+  color: ac2c5c;
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 1001;
+}
+
+.mask-alert {
+  z-index: 1000;
+}
+
+.alert-title {
+  color: #f581ac;
+  font-size: 2rem;
+}
+
+.alert-message {
+  font-size: 1.2rem;
+}
+
+.alert-button {
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #ac2c5c;
+  transition: background-color 0.3s;
+}
+
+.alert-button:hover {
+  background-color: #d63771;
+  filter: drop-shadow(0 0 0.5rem #ac2c5c);
+}

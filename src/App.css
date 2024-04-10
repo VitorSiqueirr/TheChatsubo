@@ -1,0 +1,42 @@
+#root {
+  --book-purple: #342342;
+  --book-purple-variation: rgb(103, 76, 146);
+  --book-message: #c940ec;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  min-width: 35rem;
+  max-width: 50rem;
+  max-height: 50rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  height: 1.8rem;
+  border: none;
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.input-message input {
+  width: 85%;
+}
+
+.button {
+  height: 2rem;
+  width: max-content;
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
